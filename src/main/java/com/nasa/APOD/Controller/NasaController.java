@@ -26,13 +26,14 @@ public class NasaController {
         return restTemplate.getForObject(nasaApodEndpoint, Object.class);
     }
 
-//    public class MyCanvas extends Canvas{
-//        public void paint(Graphics g) {
-//            Toolkit t = Toolkit.getDefaultToolkit();
-//            Image i = t.getImage("image.png");
-//            g.drawImage(i, 120,100,this);
-//        }
-//    }
+    @GetMapping("/imagetest")
+    public class MyCanvas extends Canvas{
+        public void paint(Graphics g) {
+            Toolkit t = Toolkit.getDefaultToolkit();
+            Image i = t.getImage("image.png");
+            g.drawImage(i, 120,100,this);
+        }
+    }
 
     //date
     //localhost:5000/v1/apod?api_key=DEMO_KEY&date=2014-10-01
